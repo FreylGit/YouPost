@@ -1,0 +1,52 @@
+body{
+    background-color: #2E3538; 
+    color: #ffffff;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+   
+}
+
+
+.fon{
+    background-color: #3d4351;
+    border: 3px solid #2AC91C ;
+    border-radius: 1px;
+    box-shadow:0 0 20px rgb(52, 214, 20);
+}
+
+.form-control{
+    border: 1px ridge #2E3538;
+    border-radius: 1px;
+    background-color: #3d4351;
+    color: #ffffff;
+}
+
+
+.back-authorization{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+
+}
+
+.button-ok{
+    background-color: #2AC91C;
+    color: #ffffff;
+    box-shadow: 0 5px 0 #23a817;
+    transition: .3s;
+}
+
+.button-ok:hover{
+    margin: 2px;
+    box-shadow: 0 2px 0 #23a817;
+}
+
+.link{
+    color: #2AC91C; 
+    transition: .3s;  
+}
+
+.link:hover{
+    color: #ffffff;   
+}
+
+
