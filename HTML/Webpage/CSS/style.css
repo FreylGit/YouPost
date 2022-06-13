@@ -1,5 +1,8 @@
 body{
-    background-color: #2E3538; 
+    background-color: #1b1f20; 
+    /*background-color: #1b1f20; */ 
+    /*background-color: #3d4351; */
+    /*background-color: #222c24; */
     color: #ffffff;
     font-size: 18px;
     font-family: 'Times New Roman', Times, serif;
@@ -9,7 +12,7 @@ body{
 
 .fon{
     background-color: #3d4351;
-    border: 3px solid #2AC91C ;
+    border: 1px solid #2AC91C ;
     border-radius: 1px;
     box-shadow:0 0 20px rgb(52, 214, 20);
 }
@@ -49,4 +52,18 @@ body{
     color: #ffffff;   
 }
 
+#blink1 {
+    -webkit-animation: blink1 1s linear infinite;
+    animation: blink1 3s linear infinite;
+  }
+  @-webkit-keyframes blink1 {
+
+    100% {  box-shadow:0 0 25px rgb(52, 214, 20); }
+  }
+  @keyframes blink1 {
+    0% {  box-shadow:0 0 25px rgb(52, 214, 20); }
+    50% {  box-shadow:0 0 25px rgb(42, 168, 16,0.5); }
+    100% { box-shadow:0 0 25px rgb(52, 214, 20); }
+    
+  }
 

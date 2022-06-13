@@ -13,47 +13,51 @@
     
 </head>
 
-<body background="https://static.tildacdn.com/tild6139-3839-4132-b463-633863663565/iron_texture4.jpg">
+<body>
   
-  <div class="h-100 h-custom ">
+  <div class="h-100 h-custom">
     <div class="container py-5 h-100 ">
       <div class="row d-flex justify-content-center align-items-center h-100">
-        <div class="col-lg-8 col-xl-6">
-          <div class="card rounded-3  bg-gradient fon ">
-            <div class="card-body p-4 p-md-5">
-              <h2 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2 text-center border-bottom border-dark">Регистрация</h2>
+        <div class="col-lg-5 col-xl-5">
+          <div class="card rounded-3  fon " id="blink1">
+            <div class="card-body p-4 p-md-4">
+              <h2 class="mb-4 pb-2 pb-md-0 mb-md-4 px-md-2 text-center border-bottom border-dark">Регистрация</h2>
               
-              <form class="px-md-3 ">
+              <form class="px-md-3" id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
                 <div class="row mb-4 pb-2 pb-md-0 mb-md-3 justify-content-center align-items-center">
-                  <div class="col-md-8">
-
+                  <div class="col-md-11">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                     <div class="form-outline mb-4">
-                      <label class="form-label border-bottom border-dark " for="form3Example1q">Имя :</label>
-                      <input placeholder="Иван" type="text" id="form3Example1q" class="form-control " data-bs-toggle="tooltip" data-bs-placement="top" title="Введите имя!" />
+                      <label class="form-label border-bottom border-dark " asp-for="Input.FirstName">Имя :</label>
+                      <input asp-for="Input.FirstName" placeholder="Иван" type="text" id="form3Example1q" class="form-control" data-bs-toggle="tooltip" data-bs-placement="top" title="Введите имя!" />
+                      <span asp-validation-for="Input.FirstName" class="text-danger"></span>
                     </div>
 
                     <form action="">
                       <div class="form-outline mb-4">
-                        <label class="form-label border-bottom border-dark" for="inp">Телефон :</label>
-                        <input placeholder="+7 (900) 123-45-67" type="text" id="inp" class="form-control " required maxlength="12" data-bs-toggle="tooltip" data-bs-placement="top" title="Введите телефон!" />
+                        <label class="form-label border-bottom border-dark" asp-for="Input.Telephone">Телефон :</label>
+                        <input asp-for="Input.Telephone" placeholder="+7 (900) 123-45-67" type="text" id="inp" class="form-control " required maxlength="12" data-bs-toggle="tooltip" data-bs-placement="top" title="Введите телефон!" />
+                        <span asp-validation-for="Input.Telephone" class="text-danger"></span>
                       </div>
                     </form>
                     
                     <div class="form-outline mb-4">
-                      <label for="exampleDatepicker1" class="form-label border-bottom border-dark">Почта :</label>
-                      <input placeholder="Bonch@mail.ru" type="text" class="form-control " id="exampleDatepicker1" data-bs-toggle="tooltip" data-bs-placement="top" title="Введите почту!" />
+                      <label asp-for="Input.Email" class="form-label border-bottom border-dark">Почта :</label>
+                      <input asp-for="Input.Email" placeholder="Bonch@mail.ru" type="text" class="form-control " id="exampleDatepicker1" data-bs-toggle="tooltip" data-bs-placement="top" title="Введите почту!" />
+                      <span asp-validation-for="Input.Email" class="text-danger"></span>
                     </div>
       
                     <div class="form-outline datepicker mb-4">
-                        <label for="exampleDatepicker1" class="form-label border-bottom border-dark">Пароль :</label>
-                        <input placeholder="1234567" type="text" class="form-control " id="exampleDatepicker1" data-bs-toggle="tooltip" data-bs-placement="top" title="Придумайте пароль!"/>
+                        <label asp-for="Input.Password" class="form-label border-bottom border-dark">Пароль :</label>
+                        <input asp-for="Input.Password" placeholder="1234567" type="text" class="form-control " id="exampleDatepicker1" data-bs-toggle="tooltip" data-bs-placement="top" title="Придумайте пароль!"/>
+                        <span asp-validation-for="Input.Password" class="text-danger"></span>
                     </div>
 
                     <div class="form-outline datepicker ">
-                      <label for="exampleDatepicker1" class="form-label border-bottom border-dark">Повторите пароль :</label>
-                      <input placeholder="1234567" type="text" class="form-control " id="exampleDatepicker1" data-bs-toggle="tooltip" data-bs-placement="top" title="Повторите пароль!" />
+                      <label asp-for="Input.ReplayPassword" class="form-label border-bottom border-dark">Повторите пароль :</label>
+                      <input asp-for="Input.ReplayPassword" placeholder="1234567" type="text" class="form-control " id="exampleDatepicker1" data-bs-toggle="tooltip" data-bs-placement="top" title="Повторите пароль!" />
+                      <span asp-validation-for="Input.ReplayPassword" class="text-danger"></span>
                     </div>
-
 
                   </div>
                   
@@ -61,7 +65,6 @@
                 
                 <div class="text-center">
                   <div class="back-authorization mb-4 " data-bs-toggle="tooltip" data-bs-placement="top" title="Авторизация" > Если вы зарегистрированы на сайте - <a href="http://site.ru" class="link">Авторизация</a></div>
-              
                   <button type="submit" class="btn button-ok bg-gradient btn-lg mb-1" data-bs-toggle="tooltip" data-bs-placement="top" title="Регистрация">Зарегистрироваться</button></br>
                 </div>
               </form>
