@@ -105,8 +105,8 @@ namespace YouPost.Areas.Identity.Pages.Account
                 user.FirstName = Input.FirstName;
                 user.LastName = Input.LastName;
                 user.Email = Input.Email;
-                user.NumberPhone = "test";
-                user.Password = "test";
+                //user.NumberPhone = "test";
+               // user.Password = "test";
                 user.Photo = "default";
                 user.Url = user.Id.ToString();
 

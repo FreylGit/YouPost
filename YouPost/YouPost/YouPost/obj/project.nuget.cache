@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zHUpNHVxNgTlF+X7gTdTHYYqVP4MOL+Q1lBPiXfbzuBBO6H4cMfG1Cga/AovaUQfudzuKsBVOe2MXd7lRqcAAQ==",
+  "dgSpecHash": "ZMUvWhZWx9/Du7Bgrxa9muWA5iErRO4K5NbR3qKx62bjnaKU1ukoi0eEuBDT5bxs4VWLO1Cyb/cX7woZOBnfiA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Андрей\\Desktop\\YouPost\\YouPost\\YouPost\\YouPost.csproj",
+  "projectFilePath": "C:\\Users\\Андрей\\Desktop\\YouPost\\YouPost\\YouPost\\YouPost\\YouPost.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Андрей\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Андрей\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",

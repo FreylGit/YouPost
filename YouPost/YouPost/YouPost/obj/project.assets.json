@@ -9846,11 +9846,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Андрей\\Desktop\\YouPost\\YouPost\\YouPost\\YouPost.csproj",
+      "projectUniqueName": "C:\\Users\\Андрей\\Desktop\\YouPost\\YouPost\\YouPost\\YouPost\\YouPost.csproj",
       "projectName": "YouPost",
-      "projectPath": "C:\\Users\\Андрей\\Desktop\\YouPost\\YouPost\\YouPost\\YouPost.csproj",
+      "projectPath": "C:\\Users\\Андрей\\Desktop\\YouPost\\YouPost\\YouPost\\YouPost\\YouPost.csproj",
       "packagesPath": "C:\\Users\\Андрей\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Андрей\\Desktop\\YouPost\\YouPost\\YouPost\\obj\\",
+      "outputPath": "C:\\Users\\Андрей\\Desktop\\YouPost\\YouPost\\YouPost\\YouPost\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
