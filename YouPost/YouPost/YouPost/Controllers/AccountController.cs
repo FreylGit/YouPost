@@ -52,6 +52,37 @@ namespace YouPost.Controllers
             }
             return View(model);
         }
+        [HttpGet]
+        public IActionResult Login()
+        {
+            LoginModel model = new LoginModel();
+            return View(model);
+        }
+        [HttpPost]
+        public async Task<IActionResult> Login(LoginModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password,true, lockoutOnFailure: false);
+                if (result.Succeeded)
+                {
+                    return RedirectToAction("Index", "Home");
+                }
+                else
+                {
+                    ModelState.AddModelError(string.Empty, "Неверная попытка входа.");
+                    return View(model);
+                }
+            }
+            return View(model);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Logout()
+        {
+            await _signInManager.SignOutAsync();
+            return RedirectToAction("Login", "Account");
+        }
         public IActionResult Index()
         {
             return View();
