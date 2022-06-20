@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "qIzEMLEYZOEP+ibYkWiRf0FQLwOcrYW6KqLZdrQV3lk=",
+  "Hash": "dxCf2D+3OKVI33UJj9mhknFNtSPlOvjU1n7CGVNSK34=",
   "Source": "YouPost",
   "BasePath": "_content/YouPost",
   "Mode": "Default",
@@ -1086,6 +1086,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\Андрей\\Desktop\\YouPost\\YouPost\\YouPost\\YouPost\\wwwroot\\css\\style_Profile.css",
+      "SourceId": "YouPost",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Андрей\\Desktop\\YouPost\\YouPost\\YouPost\\YouPost\\wwwroot\\",
+      "BasePath": "_content/YouPost",
+      "RelativePath": "css/style_Profile.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\style_Profile.css"
     },
     {
       "Identity": "C:\\Users\\Андрей\\Desktop\\YouPost\\YouPost\\YouPost\\YouPost\\wwwroot\\favicon.ico",

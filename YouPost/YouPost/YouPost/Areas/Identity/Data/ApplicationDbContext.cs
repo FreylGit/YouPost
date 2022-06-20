@@ -1,13 +1,15 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using YouPost.Areas.Identity.Data;
+using YouPost.Models;
 
 namespace YouPost.Data;
 
 public class ApplicationDbContext : IdentityDbContext<ApplicationUser, ApplicationRole, Guid>
 {
-    DbSet<ApplicationUser> Users { get; set; }
-    DbSet<ApplicationRole> Roles { get; set; }
+    public DbSet<ApplicationUser> Users { get; set; }
+    public DbSet<ApplicationRole> Roles { get; set; }
+    public DbSet<Post>Posts { get; set; }
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
         : base(options)
     {

@@ -1,33 +1,39 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Microsoft.AspNetCore.Identity;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Identity;
+using YouPost.Models;
 
 namespace YouPost.Areas.Identity.Data;
 
 
 public class ApplicationUser : IdentityUser<Guid>
 {
-    
-    
+
     [Column(TypeName = "nvarchar(100)")]
     [Display(Name = "Имя")]
-    public string FirstName { get; set; }
+    public string FirstName { get; set; }//Имя
 
     [Column(TypeName = "nvarchar(100)")]
     [Display(Name = "Фамилия")]
-    public string LastName { get; set; }
+    public string LastName { get; set; }//Фамилия
 
-    public string Photo { get; set; }
+    public string Photo { get; set; }//Аватар
 
     [Display(Name = "Дата регистрации")]
 
     public DateTime DateCreation { get; set; } = DateTime.Now;
     [MaxLength(50)]
-    public string Url { get; set; }
-   
+    public string Url { get; set; }//Ссылка
+
+    public string CoverPath { get; set; } = "";//Путь до шапки
+    public string Description { get; set; } = "";//Описание
+
+    public string Direction { get; set; } = "";//Направление
+    public ICollection<Post> Posts { get; set; }//Посты
+    public ApplicationUser()
+    {
+        Posts = new List<Post>();
+    }
+
 }
 
