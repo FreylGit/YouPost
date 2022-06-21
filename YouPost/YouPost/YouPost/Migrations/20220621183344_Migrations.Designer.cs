@@ -12,8 +12,8 @@ using YouPost.Data;
 namespace YouPost.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220620211700_Initial")]
-    partial class Initial
+    [Migration("20220621183344_Migrations")]
+    partial class Migrations
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

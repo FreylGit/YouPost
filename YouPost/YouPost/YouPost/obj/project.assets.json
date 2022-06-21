@@ -9840,23 +9840,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Андрей\\.nuget\\packages\\": {},
+    "C:\\Users\\berez\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Андрей\\Desktop\\YouPost\\YouPost\\YouPost\\YouPost\\YouPost.csproj",
+      "projectUniqueName": "C:\\Users\\berez\\OneDrive\\Рабочий стол\\YouPost\\YouPost\\YouPost\\YouPost\\YouPost.csproj",
       "projectName": "YouPost",
-      "projectPath": "C:\\Users\\Андрей\\Desktop\\YouPost\\YouPost\\YouPost\\YouPost\\YouPost.csproj",
-      "packagesPath": "C:\\Users\\Андрей\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Андрей\\Desktop\\YouPost\\YouPost\\YouPost\\YouPost\\obj\\",
+      "projectPath": "C:\\Users\\berez\\OneDrive\\Рабочий стол\\YouPost\\YouPost\\YouPost\\YouPost\\YouPost.csproj",
+      "packagesPath": "C:\\Users\\berez\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\berez\\OneDrive\\Рабочий стол\\YouPost\\YouPost\\YouPost\\YouPost\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Андрей\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\berez\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -9934,7 +9934,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }
