@@ -2,39 +2,65 @@
 
 @model RegisterModel
 
-<div class="row">
-    <div class="col-md-12">
-        <form method="post">
-            <div asp-validation-summary="All" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="FirstName"></label>
-                <input asp-for="FirstName" class="form-control" />
-                <span asp-validation-for="FirstName" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="PhoneNumber"></label>
-                <input asp-for="PhoneNumber" class="form-control" />
-                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Email"></label>
-                <input asp-for="Email" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger"></span>
-            </div>
+ <link rel="stylesheet" href="~/css/style_Profile.css" asp-append-version="true" />
 
-            <div class="form-group">
-                <label asp-for="Password"></label>
-                <input asp-for="Password" class="form-control" />
-                <span asp-validation-for="Password" class="text-danger"></span>
-            </div>
+<div class="h-100 h-custom">
+    <div class="container py-5 h-100 ">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-lg-5 col-xl-5">
+          <div class="card rounded-3  fon " id="blink1">
+            <div class="card-body p-4 p-md-4">
+              <h2 class="mb-4 pb-2 pb-md-0 mb-md-4 px-md-2 text-center border-bottom border-dark">Регистрация</h2>
+              
+              <form class="px-md-3"  method="post">
+                <div class="row mb-4 pb-2 pb-md-0 mb-md-3 justify-content-center align-items-center">
 
-            <div class="form-group">
-                <label asp-for="ConfirmPassword"></label>
-                <input asp-for="ConfirmPassword" class="form-control" />
-                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
-            </div>
-            <button type="submit" class="">Register</button>
-        </form>
+                  <div class="col-md-11">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
+                    <div class="form-outline mb-4">
+                      <label class="form-label border-bottom border-dark " asp-for="FirstName">Имя :</label>
+                      <input asp-for="FirstName" placeholder="Иван" type="text" id="form3Example1q" class="form-control" data-bs-toggle="tooltip" data-bs-placement="top" title="Введите имя!" />
+                      <span asp-validation-for="FirstName" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-outline mb-4">
+                        <label class="form-label border-bottom border-dark" asp-for="PhoneNumber">Телефон :</label>
+                        <input asp-for="PhoneNumber" placeholder="+7 (900) 123-45-67" type="text" id="inp" class="form-control " required maxlength="12" data-bs-toggle="tooltip" data-bs-placement="top" title="Введите телефон!" />
+                        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                      </div>
+
+                    <div class="form-outline mb-4">
+                      <label asp-for="Email" class="form-label border-bottom border-dark">Почта :</label>
+                      <input asp-for="Email" placeholder="Bonch@mail.ru" type="text" class="form-control " id="exampleDatepicker1" data-bs-toggle="tooltip" data-bs-placement="top" title="Введите почту!" />
+                      <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+      
+                    <div class="form-outline datepicker mb-4">
+                      <label asp-for="Password" class="form-label border-bottom border-dark">Пароль :</label>
+                      <input asp-for="Password" placeholder="1234567" type="text" class="form-control " id="exampleDatepicker1" data-bs-toggle="tooltip" data-bs-placement="top" title="Придумайте пароль!"/>
+                      <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-outline datepicker ">
+                      <label asp-for="ConfirmPassword" class="form-label border-bottom border-dark">Повторите пароль :</label>
+                      <input asp-for="ConfirmPassword" placeholder="1234567" type="text" class="form-control " id="exampleDatepicker1" data-bs-toggle="tooltip" data-bs-placement="top" title="Повторите пароль!" />
+                      <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                    </div>
+
+                  </div>
+                  
+                </div>
+                
+                <div class="text-center">
+                  <div class="back-authorization mb-4 " data-bs-toggle="tooltip" data-bs-placement="top" title="Авторизация" > Если вы зарегистрированы на сайте - <a href="http://site.ru" class="link">Авторизация</a></div>
+                  <button type="submit" class="btn button-ok bg-gradient btn-lg mb-1" data-bs-toggle="tooltip" data-bs-placement="top" title="Регистрация">Зарегистрироваться</button></br>
+                </div>
+              </form>
+  
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
+  </div>

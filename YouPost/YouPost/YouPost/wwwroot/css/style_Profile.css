@@ -88,6 +88,15 @@ body{
     box-shadow: 0 2px 0 #23a817;
 }
 
+.link {
+    color: #23a817;
+}
+
+.link:hover {
+    color: forestgreen;
+       
+}
+
 #blink1 {
     -webkit-animation: blink1 1s linear infinite;
     animation: blink1 3s linear infinite;
