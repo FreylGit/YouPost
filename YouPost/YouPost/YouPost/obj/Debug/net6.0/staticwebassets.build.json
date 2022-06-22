@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "EyQk21yqnU1dVwbRXsmut8v3zTiO4JZv1V0zMKnc4e4=",
+  "Hash": "fYVe6cwjMaTzW/NCtDEgE25woLl/9LBsygSWh8UxzEo=",
   "Source": "YouPost",
   "BasePath": "_content/YouPost",
   "Mode": "Default",
@@ -1088,6 +1088,23 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
+      "Identity": "C:\\Users\\berez\\OneDrive\\Рабочий стол\\YouPost\\YouPost\\YouPost\\YouPost\\wwwroot\\css\\style_menu.css",
+      "SourceId": "YouPost",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\berez\\OneDrive\\Рабочий стол\\YouPost\\YouPost\\YouPost\\YouPost\\wwwroot\\",
+      "BasePath": "_content/YouPost",
+      "RelativePath": "css/style_menu.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\style_menu.css"
+    },
+    {
       "Identity": "C:\\Users\\berez\\OneDrive\\Рабочий стол\\YouPost\\YouPost\\YouPost\\YouPost\\wwwroot\\css\\style_Profile.css",
       "SourceId": "YouPost",
       "SourceType": "Discovered",
@@ -1120,6 +1137,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\berez\\OneDrive\\Рабочий стол\\YouPost\\YouPost\\YouPost\\YouPost\\wwwroot\\Image\\music-v1.jpg",
+      "SourceId": "YouPost",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\berez\\OneDrive\\Рабочий стол\\YouPost\\YouPost\\YouPost\\YouPost\\wwwroot\\",
+      "BasePath": "_content/YouPost",
+      "RelativePath": "Image/music-v1.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Image\\music-v1.jpg"
     },
     {
       "Identity": "C:\\Users\\berez\\OneDrive\\Рабочий стол\\YouPost\\YouPost\\YouPost\\YouPost\\wwwroot\\js\\site.js",

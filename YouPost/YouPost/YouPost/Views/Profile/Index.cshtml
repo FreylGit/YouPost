@@ -50,13 +50,12 @@
                       </li>
                     </ul>
                   </div>
-
                 </div>
                 
                 <div class="col-md-9">
 
                   <div class="card mb-3" id="blink1">
-                    <img src="CSS\music-v1.jpg" alt="Admin" class="card-img-top " >
+                    <img src="~/Image/music-v1.jpg" alt="Admin" class="card-img-top " >
                     <div class="card-body ">
                       <div class="row border-top border-dark">
                         <textarea id="story" name="story" rows="7" cols="33" class="textarea-about">Описание канала на YouTube — вопрос сугубо индивидуальный и сколько людей, столько и решений его заполнить. Но в тоже время это возможность привлечь больше подписчиков, занять более высокие позиции в поиске видеохостинга и поисковых систем, а также отстроится от конкурентов. И эту возможность нужно использовать на 100%! 
@@ -99,14 +98,25 @@
                       </div>
                     </div>
                   </div>
-    
-                @foreach(var p in Model.Posts)
-                {
-                    <h1>@p.Title</h1>
-                }
 
-                </div>
-              </div>
+       
+                 @foreach(var p in Model.Posts)
+                 {
+                   <div class="card mb-3" id="blink1">
+                      <div class="card-body ">
+                            <h3>@p.Title</h3>
+                            <div class="row border-top border-dark"></div>
+                            <p>@p.Text</p>
+                      </div>
+                    </div>
+                 }
+                        
+
     
-            </div>
+          
+
+              </div>
         </div>
+    
+   </div>
+</div>
