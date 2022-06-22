@@ -1,11 +1,11 @@
-body{
-    background-color: #1b1f20; 
-    /*background-color: #1b1f20; */ 
+body {
+    background-color: #1b1f20;
+    /*background-color: #1b1f20; */
     /*background-color: #3d4351; */
     /*background-color: #222c24; */
     color: #ffffff;
     font-size: 18px;
-    font-family: 'Times New Roman', Times, serif;   
+    font-family: 'Times New Roman', Times, serif;
 }
 .main-body {
     padding: 15px;
@@ -23,9 +23,9 @@ body{
     background-color: #3d4351;
     background-clip: border-box;
     border-radius: .25rem;
-    border: 1px solid #2AC91C ;
+    border: 1px solid white ;
     border-radius: 1px;
-    box-shadow:0 0 10px rgb(52, 214, 20);
+    box-shadow:0 0 10px ;
 }
 
 .card-body {
