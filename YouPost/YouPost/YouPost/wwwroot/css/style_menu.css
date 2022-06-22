@@ -23,6 +23,7 @@
         /* When you mouse over the navigation links, change their color */
         .sidenav a:hover {
             color: #2AC91C;
+            background-color: #1b1f20;
         }
 
 /* Style page content */

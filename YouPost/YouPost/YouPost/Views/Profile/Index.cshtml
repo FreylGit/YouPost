@@ -64,21 +64,7 @@
                     </div>
                   </div>
 
-                  <div class="card mb-3" >
-                    <div class="card-body">
-                      <div class="row">
-                        <div class="col-md-9">
-                          <input placeholder="Что у вас нового?" type="text" id="inp" class="form-control" required maxlength="12" data-bs-toggle="tooltip" data-bs-placement="top" title="Введите телефон!" />
-                        </div>
-                        <div class="col-md-3 text-center ">
-                          <button type="submit" class="btn button-ok bg-gradient " data-bs-toggle="tooltip" data-bs-placement="top" title="Опубликовать пост">Публикация</button></br> 
-                          </button>
-                        </div>
-                      </div>
-                     
-                    </div>
-                  </div>
-
+                  <h4 class=" text-center ">Подписки</h4>
                   <div class="row gutters-sm">
                     <div class="col-sm-6 mb-3">
                       <div class="card h-100" >
@@ -99,7 +85,20 @@
                     </div>
                   </div>
 
-       
+                  <div class="card mb-3" >
+                    <div class="card-body">
+                      <div class="row">
+                      
+                        <div class="col-md-12 text-center ">
+                          <a class="nav-link1 w-100 btn btn-lg button-ok bg-gradient" asp-area="" asp-controller="Profile" asp-action="CreatePost">Публикация</a>
+                        </div>
+                      
+                      </div>
+                     
+                    </div>
+                  </div>
+
+                  <h4 class=" text-center ">Публикации</h4>
                  @foreach(var p in Model.Posts)
                  {
                    <div class="card mb-3" >

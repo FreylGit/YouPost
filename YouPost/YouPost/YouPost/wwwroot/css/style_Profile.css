@@ -34,6 +34,11 @@ body {
     padding: 1rem;
 }
 
+.nav-link1 {
+    background-color: #2AC91C;
+    color: white;
+}
+
 .gutters-sm {
     margin-right: -8px;
     margin-left: -8px;

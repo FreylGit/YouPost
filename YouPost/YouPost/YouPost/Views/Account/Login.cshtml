@@ -1,29 +1,44 @@
 ﻿@using YouPost.Models.ViewModels
 @model LoginModel
-<div class="row">
-    <div class="col-md-4">
-        <section>
+
+<link rel="stylesheet" href="~/css/style_Profile.css" asp-append-version="true" />
+
+<div class="h-100 h-custom">
+    <div class="container py-5 h-100 ">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-lg-5 col-xl-5">
+          <div class="card rounded-3  fon " >
+            <div class="card-body p-4 p-md-4">
+              <h2 class="mb-4 pb-2 pb-md-0 mb-md-4 px-md-2 text-center border-bottom border-dark">Регистрация</h2>
+              
+             <section>
             <form id="account" method="post">
                 <h2>Use a local account to log in.</h2>
                 <hr />
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                <div class="form-floating">
+                <div class="form-floating mb-4">
                     <input asp-for="Email" class="form-control" autocomplete="username" aria-required="true" />
                     <label asp-for="Email" class="form-label"></label>
                     <span asp-validation-for="Email" class="text-danger"></span>
                 </div>
-                <div class="form-floating">
+                <div class="form-floating mb-4">
                     <input asp-for="Password" class="form-control" autocomplete="current-password" aria-required="true" />
                     <label asp-for="Password" class="form-label"></label>
                     <span asp-validation-for="Password" class="text-danger"></span>
                 </div>
                
                 <div>
-                    <button id="login-submit" type="submit" class="w-100 btn btn-lg btn-primary">Log in</button>
+                    <button id="login-submit" type="submit" class="w-100 btn btn-lg nav-link1 button-ok bg-gradient mb-4">Log in</button>
                 </div>
                 
             </form>
             </section>
+  
             </div>
-            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
             

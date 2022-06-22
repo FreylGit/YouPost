@@ -3,33 +3,42 @@
 @{
     
 }
-<div class="container">
-    <div class="row">
-        <h1>Создание поста</h1>
-    </div>
 
- <div class="row justify-content-center">
-     <div class="col-7">
-<form method="post">
-   <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-   <div class="form-floating">
-       <input asp-for="Title" class="form-control"  aria-required="true" />
-       <label asp-for="Title" class="form-label"></label>
-        <span asp-validation-for="Title" class="text-danger"></span>
-       </div>
-       <div class="form-floating mt-3">
-       <textarea asp-for="Text" class="form-control" aria-label="With textarea"></textarea>
-       <label asp-for="Text" class="form-label"></label>
-        <span asp-validation-for="Text" class="text-danger"></span>
-       </div>
-       <div class="btn-group mt-3">
-           <a asp-action="Index" asp-controller="Home" class="btn btn-danger">Отмена</a>
-       <button type="submit" class="btn  btn-primary">Создать</button>
-       </div>
+<link rel="stylesheet" href="~/css/style_Profile.css" asp-append-version="true" />
+
+<div class="h-100 h-custom">
+    <div class="container py-5 h-100 ">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-lg-5 col-xl-5">
+          <div class="card rounded-3  fon " >
+            <div class="card-body p-4 p-md-4">
+              <h2 class="mb-4 pb-2 pb-md-0 mb-md-4 px-md-2 text-center border-bottom border-dark">Создание поста</h2>
+              
+             <form method="post">
+               <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+               <div class="form-floating">
+                   <input asp-for="Title" class="form-control"  aria-required="true" />
+                   <label asp-for="Title" class="form-label"></label>
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                   </div>
+                   <div class="form-floating mt-3">
+                   <textarea asp-for="Text" class="form-control" aria-label="With textarea"></textarea>
+                   <label asp-for="Text" class="form-label"></label>
+                    <span asp-validation-for="Text" class="text-danger"></span>
+                   </div>
+                   <div class="btn-group mt-3">
+                       <a asp-action="Index" asp-controller="Home" class="btn btn-danger">Отмена</a>
+                   <button type="submit" class="btn  btn-primary">Создать</button>
+                   </div>
        
-</form>
-     </div>
+            </form>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
- </div>
 
-</div>
+
