@@ -10,18 +10,21 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser, Applicati
     public DbSet<ApplicationUser> Users { get; set; }
     public DbSet<ApplicationRole> Roles { get; set; }
     public DbSet<Post>Posts { get; set; }
+    public DbSet<Subscription> Subscriptions { get; set; }
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
         : base(options)
     {
     }
 
-    protected override void OnModelCreating(ModelBuilder builder)
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
 
-        base.OnModelCreating(builder);
-
+        base.OnModelCreating(modelBuilder);
+        modelBuilder.Entity<ApplicationRole>()
+            .HasData(new ApplicationRole {Id=Guid.NewGuid(), Name = "user", NormalizedName = "user" });
+       
     }
-
+   
 
 }
 

@@ -5,7 +5,7 @@ namespace YouPost.Models.ViewModels
     public class RegisterModel
     {
         [Required]
-        public string FirstName { get; set; }
+        public string UserName { get; set; }
         [Required]
         public string PhoneNumber { get; set; }
         [Required]

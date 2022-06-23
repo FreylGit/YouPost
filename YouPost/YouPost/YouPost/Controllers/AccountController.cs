@@ -29,13 +29,12 @@ namespace YouPost.Controllers
             {
                 var user = new ApplicationUser
                 {
-                    FirstName = model.FirstName,
+                    UserName = model.UserName,
                     PhoneNumber = model.PhoneNumber,
                     Email = model.Email,
-                    UserName = model.Email,
                     LastName = "",
                     Photo = "default",
-                    Url = model.FirstName,
+                    Url = model.UserName,
                     
                 };
                 var result = await _userManager.CreateAsync(user,model.Password);
