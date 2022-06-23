@@ -21,7 +21,7 @@
    </form>
     @if (Model != null)
     {
-        <h1>@Model.UserName</h1>
+        <a asp-controller="Profile" asp-action="Index" asp-route-username="@Model.UserName"><h1>@Model.UserName</h1></a>
     }
     
 </div>
