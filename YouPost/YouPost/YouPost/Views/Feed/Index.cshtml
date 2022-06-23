@@ -1,7 +1,29 @@
-﻿
+﻿@using YouPost.Models.ViewModels
+
+@model SearchUserModel
 @{
     ViewData["Title"] = "Index";
 }
+<div class="container">
+    <h1 style="color:aliceblue">Поиск по UserName</h1>
+ <form method="post">
 
-<h1>Index</h1>
+
+<div class="input-group">
+  <div class="form-outline">
+      
+    <input type="search" id="form1" class="form-control"  name="username"  />
+    <label class="form-label" for="form1">Поиск</label>
+  </div>
+  <button type="submit" class="btn btn-primary" >
+    Найти
+  </button>
+   </form>
+    @if (Model != null)
+    {
+        <h1>@Model.UserName</h1>
+    }
+    
+</div>
+</div>
 

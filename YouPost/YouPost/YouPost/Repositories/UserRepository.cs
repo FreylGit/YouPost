@@ -23,6 +23,12 @@ namespace YouPost.Repositories
             return _context.Users.ToList();
         }
 
+        public ApplicationUser SearchByUsername(string username)
+        {
+            var user =_context.Users.FirstOrDefault(u=> String.Equals(u.UserName.ToLower(),username.ToLower()));
+            return user;
+        }
+
         public ApplicationUser UpdateUser(ApplicationUser user)
         {
             _context.Update(user);

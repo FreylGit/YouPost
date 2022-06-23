@@ -29,6 +29,7 @@ namespace YouPost.Controllers
             {
                 var user = new ApplicationUser
                 {
+                    FirstName = model.UserName,
                     UserName = model.UserName,
                     PhoneNumber = model.PhoneNumber,
                     Email = model.Email,
