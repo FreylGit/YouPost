@@ -9,7 +9,7 @@
         <div class="col-lg-5 col-xl-5">
           <div class="card rounded-3  fon " >
             <div class="card-body p-4 p-md-4">
-              <h2 class="mb-4 pb-2 pb-md-0 mb-md-4 px-md-2 text-center border-bottom border-dark">Регистрация</h2>
+              <h2 class="mb-4 pb-2 pb-md-0 mb-md-4 px-md-2 text-center border-bottom border-dark">Вход</h2>
               
              <section>
             <form id="account" method="post">
@@ -26,7 +26,13 @@
                     <label asp-for="Password" class="form-label"></label>
                     <span asp-validation-for="Password" class="text-danger"></span>
                 </div>
-               
+               <div class="form-group">
+                <div class="custom-control custom-checkbox">
+                    <input asp-for="RememberMe" type="checkbox" class="custom-control-input">
+                    <label class="custom-control-label" asp-for="RememberMe">@Html.DisplayNameFor(m => m.RememberMe)</label>
+                </div>
+
+            </div>
                 <div>
                     <button id="login-submit" type="submit" class="w-100 btn btn-lg nav-link1 button-ok bg-gradient mb-4">Log in</button>
                 </div>

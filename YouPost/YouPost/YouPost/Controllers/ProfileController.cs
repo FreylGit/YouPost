@@ -44,25 +44,9 @@ namespace YouPost.Controllers
                     return View(user);
                 }
                 return RedirectToAction("Home", "Index");
-            }
-
-           
-           
+            }  
         }
        
-        /*public async Task<IActionResult>Index(string username)
-        {
-            if(username != null)
-            {
-                var user = _repositoryUser.SearchByUsername(username);
-                if(user != null)
-                {
-                    return RedirectToAction(username);
-                }
-            }
-            return RedirectToAction("Home", "Index");
-        }
-        */
         [HttpGet]
         public async Task< IActionResult> CreatePost()
         {
