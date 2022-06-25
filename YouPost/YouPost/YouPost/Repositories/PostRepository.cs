@@ -14,6 +14,7 @@ namespace YouPost.Repositories
         {
             _context = context;
         }
+
         public void AddPost(NewPostModel model, ApplicationUser user)
         {
             Post post = new Post()
@@ -25,7 +26,7 @@ namespace YouPost.Repositories
             _context.Posts.Add(post);
             _context.SaveChanges();
         }
-       
+
         public void DeletePost(Post post)
         {
             _context.Posts.Remove(post);
@@ -40,7 +41,7 @@ namespace YouPost.Repositories
 
         public void UpdatePost(NewPostModel model)
         {
-           
+
         }
     }
 }

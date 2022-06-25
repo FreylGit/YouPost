@@ -1,11 +1,9 @@
 ﻿using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using YouPost.Models;
 
 namespace YouPost.Areas.Identity.Data;
-
 
 public class ApplicationUser : IdentityUser<Guid>
 {
@@ -30,14 +28,14 @@ public class ApplicationUser : IdentityUser<Guid>
     public string Description { get; set; } = "";//Описание
 
     public string Direction { get; set; } = "";//Направление
-    
+
     public ICollection<Post> Posts { get; set; }//Посты
     public ICollection<Subscription> Subscriptions { get; set; }
+
     public ApplicationUser()
     {
         Posts = new List<Post>();
         Subscriptions = new List<Subscription>();
     }
-
 }
 

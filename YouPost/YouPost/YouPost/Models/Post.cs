@@ -7,10 +7,11 @@ namespace YouPost.Models
     {
         [Key]
         public Guid Id { get; set; }
-     
+
         [Required]
         [MaxLength(120)]
         public string Title { get; set; }
+
         [Required]
         [MaxLength(1500)]
         public string Text { get; set; }

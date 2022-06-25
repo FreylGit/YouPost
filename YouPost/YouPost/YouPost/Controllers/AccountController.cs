@@ -1,9 +1,5 @@
-﻿using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.UI.Services;
+﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using System.Text.Encodings.Web;
 using YouPost.Areas.Identity.Data;
 using YouPost.Models.ViewModels;
 
@@ -15,19 +11,14 @@ namespace YouPost.Controllers
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly IUserStore<ApplicationUser> _userStore;
         private readonly IUserEmailStore<ApplicationUser> _emailStore;
-       
-        public IList<AuthenticationScheme> ExternalLogins { get; set; }
+
         public AccountController(UserManager<ApplicationUser> userManager,
                                 SignInManager<ApplicationUser> signInManager,
-                                IUserStore<ApplicationUser> userStore
-                                
-                             )
+                                IUserStore<ApplicationUser> userStore)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _userStore = userStore;
-           // _emailStore = emailStore;
-           
         }
 
         [HttpGet]
@@ -37,6 +28,7 @@ namespace YouPost.Controllers
 
             return View(model);
         }
+
         [HttpPost]
         public async Task<IActionResult> Register(RegisterModel model)
         {
@@ -51,40 +43,43 @@ namespace YouPost.Controllers
                     LastName = "",
                     Photo = "default",
                     Url = model.UserName,
-                    
+
                 };
+
                 await _userStore.SetUserNameAsync(user, model.Email, CancellationToken.None);
-               // await _emailStore.SetEmailAsync(user, model.Email, CancellationToken.None);
-                var result = await _userManager.CreateAsync(user,model.Password);
+                var result = await _userManager.CreateAsync(user, model.Password);
+
                 if (result.Succeeded)
                 {
-                  
                     await _userManager.AddToRoleAsync(user, "user");
                     await _signInManager.SignInAsync(user, isPersistent: false);
                     return RedirectToAction("Index", "Home");
                 }
+
                 foreach (var error in result.Errors)
                 {
                     ModelState.AddModelError("", error.Description);
                 }
             }
+
             return View(model);
         }
+
         [HttpGet]
-        
+
         public IActionResult Login()
         {
             LoginModel model = new LoginModel();
             return View(model);
         }
         [HttpPost]
-       
+
         public async Task<IActionResult> Login(LoginModel model)
         {
-            ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
-                var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password,model.RememberMe, lockoutOnFailure: false);
+                var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, lockoutOnFailure: false);
+
                 if (result.Succeeded)
                 {
                     return RedirectToAction("Index", "Home");
@@ -95,6 +90,7 @@ namespace YouPost.Controllers
                     return View(model);
                 }
             }
+
             return View(model);
         }
 

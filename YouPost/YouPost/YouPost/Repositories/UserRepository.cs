@@ -25,7 +25,7 @@ namespace YouPost.Repositories
 
         public ApplicationUser SearchByUsername(string username)
         {
-            var user =_context.Users.FirstOrDefault(u=> String.Equals(u.UserName.ToLower(),username.ToLower()));
+            var user = _context.Users.FirstOrDefault(u => String.Equals(u.UserName.ToLower(), username.ToLower()));
             return user;
         }
 
