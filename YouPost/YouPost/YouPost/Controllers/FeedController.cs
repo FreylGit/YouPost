@@ -26,10 +26,13 @@ namespace YouPost.Controllers
             if (username != null)
             {
                 var user = _repository.SearchByUsername(username);
-                SearchUserModel model = new SearchUserModel();
-                model.ToModel(user);
+                if(user != null)
+                {
+                    SearchUserModel model = new SearchUserModel();
+                    model.ToModel(user);
 
-                return View(model);
+                    return View(model);
+                }
             }
 
             return View();

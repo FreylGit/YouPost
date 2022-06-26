@@ -36,8 +36,9 @@ namespace YouPost.Controllers
 
                     return View(user);
                 }
+                user = _repositoryUser.GetUsers().First();
 
-                return View();
+                return View(user);
             }
             else
             {
@@ -67,5 +68,11 @@ namespace YouPost.Controllers
 
             return RedirectToAction("Index", "Profile");
         }
+        [HttpGet]
+        public async Task<IActionResult>Follow(string username)
+        {
+            return RedirectToAction("Index", "Profile");
+        }
+
     }
 }

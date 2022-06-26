@@ -43,10 +43,9 @@ namespace YouPost.Controllers
                     LastName = "",
                     Photo = "default",
                     Url = model.UserName,
-
                 };
 
-                await _userStore.SetUserNameAsync(user, model.Email, CancellationToken.None);
+                await _userStore.SetUserNameAsync(user, model.UserName, CancellationToken.None);
                 var result = await _userManager.CreateAsync(user, model.Password);
 
                 if (result.Succeeded)
@@ -66,7 +65,6 @@ namespace YouPost.Controllers
         }
 
         [HttpGet]
-
         public IActionResult Login()
         {
             LoginModel model = new LoginModel();
