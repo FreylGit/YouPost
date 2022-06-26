@@ -1,7 +1,10 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using YouPost.Areas.Identity.Data;
+using YouPost.Data;
 using YouPost.Models.ViewModels;
+using YouPost.Repositories;
+using YouPost.Repositories.Interface;
 
 namespace YouPost.Controllers
 {
@@ -11,14 +14,16 @@ namespace YouPost.Controllers
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly IUserStore<ApplicationUser> _userStore;
         private readonly IUserEmailStore<ApplicationUser> _emailStore;
+        private readonly IUserRepository _repository;
 
         public AccountController(UserManager<ApplicationUser> userManager,
                                 SignInManager<ApplicationUser> signInManager,
-                                IUserStore<ApplicationUser> userStore)
+                                IUserStore<ApplicationUser> userStore,ApplicationDbContext context)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _userStore = userStore;
+            _repository = new UserRepository(context);
         }
 
         [HttpGet]
@@ -76,8 +81,14 @@ namespace YouPost.Controllers
         {
             if (ModelState.IsValid)
             {
-                var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, lockoutOnFailure: false);
+                ApplicationUser user = _repository.GetUsers().FirstOrDefault(u=> u.Email==model.Email);
+                if (user == null)
+                {
+                    return View(model);
+                }
 
+                var result = await _signInManager.PasswordSignInAsync(user.UserName, model.Password, model.RememberMe, lockoutOnFailure: false);
+                
                 if (result.Succeeded)
                 {
                     return RedirectToAction("Index", "Home");
